@@ -1,0 +1,17 @@
+CUANDO USAR UN callback:
+
+-Cuando quieres que una función se ejecute después de otra.
+-Ideal para cosas simples y rápidas, como ejecutar algo después de un tiempo o al terminar un evento.
+Ejemplo: 
+setTimeout(() => { console.log("Hola"); }, 2000);
+
+CUANDO USAR UNA promesa:
+
+-Cuando tienes tareas que toman tiempo, como descargar datos, leer archivos o consultar una API.
+-Permite manejar éxitos (resolve) y errores (reject) de forma más ordenada.
+-Se puede combinar con async/await para que el código sea más fácil de leer.
+Ejemplo:
+const promesa = new Promise((resolve, reject) => {
+    setTimeout(() => resolve("Éxito"), 2000);
+});
+promesa.then((mensaje) => console.log(mensaje));
